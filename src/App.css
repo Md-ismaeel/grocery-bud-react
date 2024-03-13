@@ -87,6 +87,9 @@ body {
   text-decoration: line-through;
 }
 
+.check-box {
+  cursor: pointer;
+}
 .line-throw {
   text-transform: capitalize;
 }

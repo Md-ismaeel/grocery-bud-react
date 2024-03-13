@@ -9,18 +9,16 @@ export const GroceryCart = () => {
 
 
     useEffect(() => {
-        // Retrieve data from localStorage when component mounts
         const savedData = localStorage.getItem('groceryData');
-        console.log('Retrieved data from localStorage:', savedData);
-        if (savedData) {
+        // console.log('Retrieved data from localStorage:', savedData);
+        if (savedData && JSON.parse(savedData).length) {
             setGroceryData(JSON.parse(savedData));
         }
     }, []);
 
     useEffect(() => {
-        // Update localStorage whenever groceryData changes
         localStorage.setItem('groceryData', JSON.stringify(groceryData));
-        console.log('Saved data to localStorage:', groceryData);
+        // console.log('Saved data to localStorage:', groceryData);
     }, [groceryData]);
 
 
